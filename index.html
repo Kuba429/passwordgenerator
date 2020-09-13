@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="choices">
+        <div id="upperCaseSelection" class="choice">
+          <input type="checkbox" name="upperCase" id="upperCase" oninput="selection(upperCaseCharacters)"/>
+          <p>Wielkie litery</p>
+        </div>
+        <div id="lowerCaseSelection" class="choice">
+          <input type="checkbox" name="lowerCase" id="lowerCase" oninput="selection(lowerCaseCharacters)"/>
+          <p>Małe litery</p>
+        </div>
+        <div id="numbersSelection" class="choice">
+          <input type="checkbox" name="numbers" id="numbers" oninput="selection(numbers)"/>
+          <p>Cyfry</p>
+        </div>
+        <div id="specialCharactersSelection" class="choice">
+          <input
+            type="checkbox"
+            name="specialCharacters"
+            id="specialCharacters"
+            oninput="selection(special)"
+          />
+          <p>Znaki Specjalne</p>
+        </div>
+        <div id="lengthSelection" class="choice">
+          <input
+            type="range"
+            name="passwordLength"
+            id="passwordLength"
+            min="1"
+            max="30"
+            oninput="sliderValueUpdate()"
+          />
+          <p id="length-value">0</p>
+        </div>
+        <button id="submit" onclick="passwordGeneration(sliderLength.value)">Generuj</button>
+      </div>
+
+      <div id="passwordSpace">
+        <input id="passwordDisplay" value="Hasło"></input>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

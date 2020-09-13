@@ -1,0 +1,80 @@
+* {
+  overflow: auto;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.container {
+  min-width: 40vw;
+  max-width: 100vh;
+  height: 80vh;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  margin: 30px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  font-size: larger;
+}
+
+.choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+#passwordSpace {
+  max-width: 100vh;
+  padding: 10px;
+
+  padding: 2px 6px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#passwordDisplay {
+  padding: 5px;
+  text-align: center;
+}
+#submit {
+  background: transparent;
+  font-size: 20px;
+  border: rgb(238, 174, 202) solid 1px;
+}
+#submit:active {
+  border: rgb(0, 117, 255) solid 1px;
+  text-decoration: aqua;
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 90vw;
+    padding: 0px;
+    margin: 0px;
+  }
+  #passwordSpace {
+    font-size: 10px;
+  }
+}
