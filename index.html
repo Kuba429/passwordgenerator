@@ -11,15 +11,15 @@
       <div class="choices">
         <div id="upperCaseSelection" class="choice">
           <input type="checkbox" name="upperCase" id="upperCase" oninput="selection(upperCaseCharacters)"/>
-          <p>Wielkie litery</p>
+          <p>Upper Case Letters</p>
         </div>
         <div id="lowerCaseSelection" class="choice">
           <input type="checkbox" name="lowerCase" id="lowerCase" oninput="selection(lowerCaseCharacters)"/>
-          <p>Małe litery</p>
+          <p>Lower Case Letters</p>
         </div>
         <div id="numbersSelection" class="choice">
           <input type="checkbox" name="numbers" id="numbers" oninput="selection(numbers)"/>
-          <p>Cyfry</p>
+          <p>Numbers</p>
         </div>
         <div id="specialCharactersSelection" class="choice">
           <input
@@ -28,7 +28,7 @@
             id="specialCharacters"
             oninput="selection(special)"
           />
-          <p>Znaki Specjalne</p>
+          <p>Special Characters</p>
         </div>
         <div id="lengthSelection" class="choice">
           <input
@@ -41,11 +41,11 @@
           />
           <p id="length-value">0</p>
         </div>
-        <button id="submit" onclick="passwordGeneration(sliderLength.value)">Generuj</button>
+        <button id="submit" onclick="passwordGeneration(sliderLength.value)">Generate</button>
       </div>
 
       <div id="passwordSpace">
-        <input id="passwordDisplay" value="Hasło"></input>
+        <input id="passwordDisplay" value="Password"></input>
       </div>
     </div>
     <script src="script.js"></script>
